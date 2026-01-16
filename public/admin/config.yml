@@ -3,8 +3,7 @@ local_backend: true
 
 backend:
   name: git-gateway
-  branch: main 
-
+  branch: main
 
 media_folder: "public/images/uploads" # Where files go in your project
 public_folder: "/images/uploads"      # How the browser sees them
