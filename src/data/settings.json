@@ -1,8 +1,6 @@
----
-import settings from '../data/settings.json';
----
-<footer>
-  <p>{settings.name}</p>
-  <p>Call us: {settings.phone}</p>
-  <p>Hours: {settings.hours}</p>
-</footer>
+{
+  "name": "GreenCross Pharmacy",
+  "phone": "555-0123",
+  "address": "123 Health St, Medical City",
+  "hours": "Mon-Fri: 9am-6pm"
+}

@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Footer from '../components/Footer.astro';
 const allServices = await getCollection('services');
 ---
 
@@ -19,5 +20,7 @@ const allServices = await getCollection('services');
         ))}
       </div>
     </section>
+
+	<Footer />
   </body>
 </html>

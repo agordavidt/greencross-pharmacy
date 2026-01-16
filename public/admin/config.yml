@@ -1,13 +1,11 @@
 local_backend: true
 
-
 backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/images/uploads" # Where files go in your project
-public_folder: "/images/uploads"      # How the browser sees them
-
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "services"
@@ -21,17 +19,15 @@ collections:
       - { label: "Summary", name: "description", widget: "string" }
       - { label: "Page Body", name: "body", widget: "markdown" }
 
-
-
-    - name: "settings"
-      label: "Site Settings"
-      delete: false # Prevents accidental deletion of the config
-      files:
-        - name: "general"
-          label: "Contact & Hours"
-          file: "src/data/settings.json" # Decap will create this folder/file
-          fields:
-            - { label: "Pharmacy Name", name: "name", widget: "string" }
-            - { label: "Phone Number", name: "phone", widget: "string" }
-            - { label: "Address", name: "address", widget: "text" }
-            - { label: "Opening Hours", name: "hours", widget: "text", hint: "e.g. Mon-Fri: 9am-6pm" }
+  - name: "settings"
+    label: "Site Settings"
+    delete: false
+    files:
+      - name: "general"
+        label: "Contact & Hours"
+        file: "src/data/settings.json"
+        fields:
+          - { label: "Pharmacy Name", name: "name", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Opening Hours", name: "hours", widget: "text", hint: "e.g. Mon-Fri: 9am-6pm" }

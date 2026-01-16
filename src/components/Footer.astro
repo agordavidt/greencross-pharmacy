@@ -1,0 +1,32 @@
+---
+// Path to the data file created by Decap CMS
+import settings from '../data/settings.json';
+
+const { 
+  name = "Pharmacy Name", 
+  phone = "Contact Us", 
+  address = "Our Location", 
+  hours = "Open Hours" 
+} = settings;
+---
+
+<footer style="background: #f4f7f6; padding: 3rem 1rem; margin-top: 5rem; border-top: 4px solid #2ecc71;">
+  <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+    <div>
+      <h3 style="color: #27ae60;">{name}</h3>
+      <p>{address}</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><strong>Phone:</strong> {phone}</p>
+      <p><strong>Hours:</strong> {hours}</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/" style="color: #333;">Home</a></li>
+        <li><a href="/admin/index.html" style="color: #999; font-size: 0.8rem;">Staff Login</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
