@@ -1,16 +1,23 @@
 ---
-
+import { getCollection } from 'astro:content';
+const allServices = await getCollection('services');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html>
+  <body>
+    <h1>Welcome to GreenCross Pharmacy</h1>
+    
+    <section>
+      <h2>Our Services</h2>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        {allServices.map(service => (
+          <div style="border: 1px solid #ccc; padding: 20px; border-radius: 8px;">
+            <h3>{service.data.title}</h3>
+            <p>{service.data.description}</p>
+            <a href={`/services/${service.slug}`}>Read More →</a>
+          </div>
+        ))}
+      </div>
+    </section>
+  </body>
 </html>

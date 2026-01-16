@@ -1,0 +1,8 @@
+---
+import settings from '../data/settings.json';
+---
+<footer>
+  <p>{settings.name}</p>
+  <p>Call us: {settings.phone}</p>
+  <p>Hours: {settings.hours}</p>
+</footer>
